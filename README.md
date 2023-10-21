@@ -13,6 +13,8 @@
 ```css
   * Import to Plugins folder
 ```
+> The plugin will always DISABLE itself to keep a good UI. You will ALWAYS have to enable the plugin to toggle plugins, a modal displays with a dropdrown and you just select an option.
+
 
 ##  Credits:
  > Discord : [Shifts#1337](https://discord.com/users/994717305542021244)
