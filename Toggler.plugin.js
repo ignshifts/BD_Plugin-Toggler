@@ -10,16 +10,9 @@
 module.exports = class Toggler {
 
     start() {
-        toggle("disable")
-
-
-
+        toggle()
     }
-
     stop() {
-
-
-
     };
 }
 
@@ -35,10 +28,7 @@ async function toggle() {
   
     const handleOptionChange = (option) => {
       setSelectedOption(option);
-      console.log(option)
       plugins.forEach(plugin => {
-        
-        
         if (option !== "Select an option") {
           if(option == "disable") {
             if(plugin.name === "Toggler") { BdApi.Plugins.disable(plugin.id); return; }
@@ -50,7 +40,6 @@ async function toggle() {
             BdApi.UI.showToast(`[Toggler] Enabled ${plugin.name}`, { type: "success" });
         }
       }
-    
     });
     };
 
@@ -74,14 +63,6 @@ async function toggle() {
         )
       )
     );
-
-    
   };
-        
-
   BdApi.UI.showConfirmationModal("Dropdown", BdApi.React.createElement(Dropdown));
-
 }
-
-  
-  
